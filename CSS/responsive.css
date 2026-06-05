@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @media (max-width: 1400px) {
     .main-presentation p {
         font-size: 20px;
@@ -258,4 +259,266 @@
     .main-presentation{
         height: max-content;
     }
+=======
+@media (max-width: 1400px) {
+    .main-presentation p {
+        font-size: 20px;
+        width: 55%;
+    }
+
+    .main-presentation a {
+        width: 40%;
+        left: 5%;
+    }
+
+
+    .projects-session div.Overview {
+        grid-template-columns: 4fr 4fr 1fr;
+
+    }
+
+    .Contact h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .Contact ul li a {
+        font-size: 0px;
+    }
+
+    .Contact ul li a svg {
+        left: calc(50% - 12.5px);
+    }
+
+    .tech {
+        width: 100%;
+    }
+
+    .projects-session .Filter {
+        min-height: 70px;
+    }
+
+    .InfoSession .description {
+        color: var(--secondary-color-text);
+        grid-area: Description;
+        margin-left: 15px;
+        font-size: 15px;
+    }
+
+    .InfoSession .created_at {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .main-presentation {
+        clip-path: ellipse(70% 100% at 0% 70%);
+    }
+
+    .main-presentation p {
+        font-size: 18px;
+    }
+
+    .projects-session div.Overview {
+        grid-template-columns: 6fr 4fr 1fr;
+
+    }
+
+    .tech li {
+        font-size: 20px;
+    }
+
+    .main-presentation a {
+        width: 50%;
+        left: 5%;
+    }
+}
+
+@media (max-width: 950px) {
+    .main-presentation {
+        clip-path: ellipse(90% 100% at 0% 50%);
+    }
+
+    .main-presentation a {
+        width: 60%;
+        left: 10%;
+    }
+
+    .main-presentation p {
+        font-size: 20px;
+        width: 75%;
+    }
+
+    .InfoSession .background {
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .InfoSession .IMGsession {
+        width: 94%;
+        margin-left: 2%;
+        height: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(25%, 0.4fr));
+
+    }
+
+
+    .projects-session div.Overview {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        grid-template-rows: 1fr 4fr 2fr;
+        grid-template-areas:
+            "Nav Nav"
+            "Skills Skills"
+            "Tech Contact"
+        ;
+        min-height: 600px;
+    }
+
+
+}
+
+@media (max-width: 750px) {
+    .main-presentation {
+        clip-path: none;
+        box-shadow: none;
+    }
+
+    .main-presentation p {
+        width: 100%;
+        text-align: justify;
+    }
+
+    .main-presentation a {
+        width: 80%;
+        left: 10%;
+    }
+
+    .main-presentation h1 {
+        text-align: center;
+        width: 100%;
+    }
+
+    .InfoSession .background {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 5fr 5fr 1fr 1fr;
+        grid-template-areas:
+            "Name"
+            "Cover"
+            "Tags"
+            "Description "
+            "IMG "
+            "CreateAt"
+        ;
+        gap: 50px;
+    }
+
+    .InfoSession .LinkSession {
+        height: fit-content;
+    }
+
+    .InfoSession .description {
+        height: fit-content;
+    }
+
+    .InfoSession .TagsArea {
+        min-height: 300px;
+    }
+
+    .InfoSession .created_at {
+        display: none;
+    }
+
+    .InfoSession .IMGsession {
+        height: fit-content;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .main-presentation a {
+        width: 90%;
+        left: 5%;
+    }
+
+    .main-presentation p {
+        font-size: 17px;
+    }
+
+    .cover-presentation h1 a {
+        font-size: 30px;
+    }
+
+    .cover-presentation h2 {
+        font-size: 4vw;
+    }
+
+    .InfoSession .IMGsession {
+        grid-template-columns: repeat(auto-fit, minmax(40%, 0.4fr));
+
+    }
+
+    .projects-session div.Overview {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 100px;
+    }
+
+    .Overview nav {
+        width: 100%;
+    }
+
+    .Overview nav h1 {
+        font-size: 20px;
+    }
+
+    .tech,
+    .skills {
+        display: none !important;
+
+    }
+
+    .Contact h1 {
+        width: min-content;
+        align-self: center;
+    }
+
+    .Contact {
+        display: flex;
+        justify-self: start;
+        flex-direction: row;
+    }
+
+    .Contact ul {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .Contact li {
+        height: fit-content;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 450px) {
+    .InfoSession .IMGsession {
+        grid-template-columns: 1fr;
+
+    }
+}
+
+@media (max-width: 450px) {}
+
+@media (orientation: portrait) {
+    .main-presentation{
+        height: max-content;
+    }
+>>>>>>> cd62c2f6a381305e7c4702ab631ea8c80956180a
 }
