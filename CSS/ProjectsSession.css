@@ -1,0 +1,259 @@
+.projects-session {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden !important;
+    overflow-y:visible !important;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    background-color: var(--main-background);
+    border-top: 1px solid var(--vibrant);
+}
+
+.projects-session div {
+    transition: 300ms;
+}
+
+.projects-session div.projects::-webkit-scrollbar-thumb {
+    background-color: var(--card);
+}
+
+.projects-session div.projects {
+
+    background-image: linear-gradient(180deg, var(--main-background) 70%, var(--tertiary-background));
+    display: grid;
+    overflow-y: visible;
+    height: auto;
+    overflow-x: hidden;
+    padding: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    grid-auto-rows: 450px;
+    gap: 20px;
+    flex: 10;
+    min-height: max-content;
+    justify-content: center;
+}
+
+/* Card */
+.projects div.card {
+    max-width: 300px;
+    background-image: linear-gradient(var(--card), var(--tertiary-background));
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.projects div.card:hover {
+    box-shadow: 0px 0px 10px var(--vibrant);
+    transform: scale(1.025);
+}
+
+.projects div.card img {
+    width: 300px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.projects div.card h1 {
+    background-color: var(--tertiary-background);
+    opacity: 1;
+    padding: 10px 2px;
+    margin: 15px 5px 5px 5px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 20px;
+    transform: translateY(-210px);
+
+}
+
+.projects div.card ul {
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    width: fit-content;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: default;
+    z-index: 13;
+}
+
+.projects div.card ul li {
+    background-color: var(--tertiary-background);
+    color: var(--vibrant);
+    box-shadow: 0px 0px 2px var(--vibrant);
+
+    text-align: left;
+    width: fit-content;
+    padding: 4px;
+    margin: 7px;
+    border-radius: 10px;
+    transition: 300ms;
+}
+
+
+.projects .heart,
+.projects .heart_text {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    left: 10px;
+    z-index: 11;
+    transition: 200ms;
+    bottom: 45%;
+}
+
+.heart:focus {
+    outline: none;
+    border: none;
+}
+
+.heart:focus svg {
+    stroke-width: 2px;
+    stroke: var(--vibrant);
+}
+
+.projects .heart:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.projects .heart_text {
+    left: 45px;
+    transform: translateY(15px);
+    font-size: 20px;
+}
+
+.projects .created_at {
+    position: absolute;
+    right: 10px;
+    bottom: 45%;
+}
+
+.projects .buttonInfo {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    border: none;
+    z-index: 10;
+}
+
+.projects .isFinished {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    bottom: 10%;
+    z-index: 15;
+}
+
+.isFinished svg {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.isFinished svg .tooltip {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    width: 0;
+    height: 35px;
+    font-size: 1px;
+    transition: 500ms;
+    text-align: center;
+    display: flexbox;
+    align-content: center;
+}
+
+.isFinished svg .tooltip.EmAndamento {
+    color: #FBBF24;
+}
+
+.isFinished svg .tooltip.Completo {
+    color: var(--vibrant);
+}
+
+.projects .isFinished:hover svg .tooltip {
+    background-color: var(--tertiary-background);
+    box-shadow: 0px 0px 3px var(--vibrant);
+    left: -150px;
+    width: 150px;
+    font-size: 15px;
+    opacity: 1;
+    transition: 300ms;
+}
+
+canvas.background {
+    opacity: 0.3;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Filter */
+
+.Filter {
+    align-self: center;
+    width: 96%;
+    height: 5%;
+    border-bottom: 2px solid var(--secondary-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+}
+
+.Filter::-webkit-scrollbar {
+    height: 2px;
+}
+
+.Filter::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.Filter button {
+    min-width: max-content;
+    background-color: var(--main-background);
+    color: var(--vibrant);
+    padding: 2px 10px;
+    margin: 0 5px;
+    border: 1px solid var(--vibrant);
+    font-size: 18px;
+    border-radius: 10px;
+    transition: 200ms;
+}
+
+.Filter button:hover,
+.projects div.card ul li:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.Filter button.Active,
+.projects div.card ul li.Active {
+    color: var(--main-text-color);
+    background-color: var(--vibrant);
+}
+
+.Filter button.Active:hover,
+.projects div.card ul li.Active:hover {
+    transform: scale(0.95);
+    cursor: pointer;
+}
