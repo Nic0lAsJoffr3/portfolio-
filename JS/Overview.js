@@ -121,7 +121,7 @@ const ContactList = [
     ["GitHub", "https://github.com/Nic0lAsJoffr3", IMG_GitHUB()],
     ["LinkedIn", "https://www.linkedin.com/in/joffrenicolas/", IMG_LinkedIn()],
     ["Email", "mailto:nicolasjoffredesouza0@gmail.?subject=Oportunidade&body=Olá Nicolas, vi seu portfólio e gostaria de falar com você.", IMG_Email()],
-    ["Baixar meu currículo", "https://nic0lasjoffr3.github.io/PDF/Currículo-Nícolas-Joffre.pdf", IMG_Curriculum(), true]
+    ["Baixar meu currículo", "https://nic0lasjoffr3.github.io/portfolio-/PDF/Currículo-Nícolas-Joffre.pdf", IMG_Curriculum(), true]
 ]
 const ContactUl = document.createElement("ul")
 
