@@ -1,0 +1,186 @@
+:root {
+    --main-background: #0D1117;
+    --secondary-background: #1E293B;
+    --tertiary-background: #111827;
+    --button-background: #3B82F6;
+
+    --vibrant: #3B82F6;
+    --card: #334155;
+
+    --main-color-text: #F8FAFC;
+    --secondary-color-text: #CBD5E1;
+
+    --main-font-text: "Inter", sans-serif;
+    --secondary-font-text: "JetBrains Mono", monospace;
+
+}
+
+/* accessibility  */
+
+*:focus-visible {
+    outline: 2px solid var(--vibrant);
+    border-radius: 2%;
+    text-decoration: underline !important;
+    background-color: var(--main-background);
+    outline-offset: 2px;
+    border-radius: inherit;
+}
+
+/* html components */
+::selection {
+    background-color: var(--vibrant);
+    color: var(--main-color-text);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secondary-background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--vibrant);
+}
+
+
+
+/* Main */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    color: var(--main-color-text);
+    font-family: var(--secondary-font-text);
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+/* cover-presentation */
+.cover-presentation {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(0deg, var(--secondary-background), black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--vibrant);
+}
+
+.cover-presentation h1 a {
+    color: var(--main-color-text);
+    font-size: 45px;
+    text-decoration: none;
+    text-align: center;
+    transition: 1s;
+}
+
+.cover-presentation h1 a:hover {
+    color: var(--vibrant);
+    transition: 500ms;
+}
+
+.cover-presentation h2 {
+    text-align: center;
+}
+
+.cover-presentation svg {
+    align-self: center;
+    position: absolute;
+    bottom: 10%;
+    fill: white;
+    animation: Gotodown 1s ease-in-out alternate-reverse infinite;
+    width: 50px;
+    height: 50px;
+}
+
+
+@keyframes Gotodown {
+    0% {
+        fill: #ffffff36;
+        bottom: 10%;
+
+    }
+
+    25% {
+        fill: #ffffff36;
+
+    }
+
+    100% {
+        fill: white;
+        bottom: 7%;
+    }
+}
+
+/* Main section */
+
+.main-presentation {
+    min-height: 100vh;
+    overflow: visible;
+    width: 100vw;
+    position: relative;
+    background-image: linear-gradient(var(--secondary-background), var(--tertiary-background));
+
+    clip-path: ellipse(60% 100% at 0% 50%);
+    box-shadow: inset -20px 0px 20px var(--vibrant);
+
+}
+
+
+.main-presentation h1 {
+    padding: 15px;
+    font-size: 50px;
+    box-sizing: border-box;
+    font-family: var(--main-font-text);
+    width: fit-content;
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 10px 30px 10px 10px;
+    background-color: #00000015;
+}
+
+.main-presentation p {
+    padding: 15px;
+    text-align: left;
+    width: 50%;
+    font-size: 23px;
+    box-sizing: border-box;
+    font-family: var(--secondary-font-text);
+    margin: 0;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+
+
+.main-presentation a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 25%;
+    margin: 20px;
+    margin-bottom: 0;
+    padding: 0;
+    height: 80px;
+    border-radius: 5px;
+    border: none;
+    color: var(--main-color-text);
+    font-family: var(--secondary-font-text);
+    font-size: 30px;
+    background-color: var(--button-background);
+    transition: 400ms;
+}

@@ -1,0 +1,172 @@
+.InfoSession {
+    background-color: #0000009d;
+    pointer-events:all;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 100;
+
+    border: none;
+}
+
+.InfoSession .background {
+    width: 90vw;
+    height: 99vh;
+    top: 1vh;
+    left: 5vw;
+    border-radius: 15px;
+    position: fixed;
+    background-color: var(--secondary-background);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 3fr 2fr 1fr;
+    grid-template-areas:
+        "Name  Name"
+        "Cover Description"
+        "Tags IMG"
+        "CreateAt IMG"
+}
+
+.InfoSession .close {
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+    background-color: transparent;
+}
+
+.InfoSession .Name {
+    color: var(--main-color-text);
+    font-family: var(--main-font-text);
+    font-size: 50px;
+    margin-left: 2.5%;
+    text-align: left;
+    grid-area: Name;
+}
+
+.InfoSession .coverIMG {
+    border: 3px solid var(--main-color-text);
+    border-radius: 10px;
+    width: 98%;
+    grid-area: Cover;
+    justify-self: center;
+    user-select: none;
+    pointer-events: none;
+}
+
+.InfoSession .created_at {
+    color: var(--secondary-color-text);
+    grid-area: CreateAt;
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    bottom: auto !important;
+    top: auto;
+}
+
+.InfoSession .description {
+    color: var(--secondary-color-text);
+    grid-area: Description;
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+.InfoSession .TagsArea {
+    width: 100%;
+    height: 100%;
+    grid-area: Tags;
+}
+
+.InfoSession .TagsArea ul {
+    margin: 0;
+    padding: 0 0 0 10px;
+    list-style: none;
+}
+
+.InfoSession .TagsArea li {
+    color: var(--secondary-color-text);
+    font-size: 15px;
+}
+
+.InfoSession .LinkSession {
+    height: 60%;
+    grid-area: Tags;
+    align-self: end;
+    align-content: end;
+    list-style: none;
+    padding: 0 0 0 5px;
+}
+
+.InfoSession .LinkSession li {
+    margin-top: 20px;
+    margin-left: 40px;
+    position: relative;
+}
+
+.InfoSession .LinkSession li a svg {
+    position: absolute;
+    left: 0;
+    transform: translate(-17.5px, 2.5px);
+}
+
+.InfoSession .LinkSession li a {
+    color: var(--main-color-text);
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.InfoSession .IMGsession {
+    width: 96%;
+    margin-left: 2%;
+    height: 98%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    grid-area: IMG;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 0.4fr));
+    justify-content: center;
+    padding: 0 10px;
+    gap: 15px;
+}
+
+.IMGsession img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 1px solid var(--main-color-text);
+    transition: 400ms;
+}
+
+
+.IMGsession img:hover {
+    border: 2px solid var(--main-color-text);
+    transform: scale(0.95);
+    cursor: pointer;
+}
+
+.IMGsession img:fullscreen {
+    border: none;
+    border-radius: 0;
+    user-select: none;
+    pointer-events: none;
+}
+
+.IMGsession::-webkit-scrollbar {
+    width: 5px;
+}
+
+.IMGsession::-webkit-scrollbar-track {
+    background: var(--tertiary-background);
+}
+
+.IMGsession::-webkit-scrollbar-thumb {
+    background: var(--main-color-text);
+}
