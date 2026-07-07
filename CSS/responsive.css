@@ -4,9 +4,10 @@
         width: 55%;
     }
 
-    .main-presentation a {
+     .main-presentation a {
         width: 40%;
-        left: 5%;
+        margin: 40px 0 0 15px;
+        transform: translateY(-30px);
     }
 
 
@@ -67,8 +68,9 @@
     }
 
     .main-presentation a {
-        width: 50%;
-        left: 5%;
+        width: 60%;
+        margin: 40px 0 0 15px;
+        transform: translateY(-30px);
     }
 }
 
@@ -77,10 +79,7 @@
         clip-path: ellipse(90% 100% at 0% 50%);
     }
 
-    .main-presentation a {
-        width: 60%;
-        left: 10%;
-    }
+   
 
     .main-presentation p {
         font-size: 20px;
@@ -109,7 +108,7 @@
         flex: 1;
         display: grid;
         grid-template-columns: 4fr 1fr;
-        grid-template-rows: 1fr 4fr 2fr;
+        grid-template-rows: 1fr 1fr 2fr;
         grid-template-areas:
             "Nav Nav"
             "Skills Skills"
@@ -132,9 +131,11 @@
         text-align: justify;
     }
 
-    .main-presentation a {
-        width: 80%;
-        left: 10%;
+       .main-presentation a {
+        width: 90%;
+        margin: 25px 5% 0 5%;
+        font-size: 20px;
+        transform: translateY(-10px);
     }
 
     .main-presentation h1 {
@@ -179,9 +180,10 @@
 }
 
 @media (max-width: 550px) {
-    .main-presentation a {
-        width: 90%;
-        left: 5%;
+    
+
+    .main-presentation h1 {
+        font-size: 25px;
     }
 
     .main-presentation p {
@@ -255,7 +257,7 @@
 @media (max-width: 450px) {}
 
 @media (orientation: portrait) {
-    .main-presentation{
+    .main-presentation {
         height: max-content;
     }
 }

@@ -166,14 +166,15 @@ body::-webkit-scrollbar {
 
 
 
+
 .main-presentation a {
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    width: 25%;
-    margin: 20px;
-    margin-bottom: 0;
+    width: 40%;
+    margin: 40px 0 0 15px;
+    transform: translateY(-30px);
     padding: 0;
     height: 80px;
     border-radius: 5px;
