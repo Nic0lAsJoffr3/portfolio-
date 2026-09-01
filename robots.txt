@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nic0lasjoffr3.github.io/portfolio-/sitemap.xml
